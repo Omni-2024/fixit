@@ -11,7 +11,7 @@ const Contact = () => {
       {/* Page Header */}
       <div className="bg-brand-blue-950 text-white py-20">
         <div className="container text-center">
-          <h1 className="text-4xl md:text-5xl font-bold font-heading">Get In Touch</h1>
+          <h1 className="text-4xl md:text-5xl font-bold font-heading text-white">Get In Touch</h1>
           <p className="mt-4 text-lg text-brand-blue-200">We're here to help, 24/7. Reach out to us anytime.</p>
         </div>
       </div>

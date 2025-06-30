@@ -7,7 +7,7 @@ const About = () => {
       {/* Page Header */}
       <div className="bg-brand-blue-950 text-white py-20">
         <div className="container text-center">
-          <h1 className="text-4xl md:text-5xl font-bold font-heading">About WEFIX LTD</h1>
+          <h1 className="text-4xl md:text-5xl font-bold font-heading text-white">About WEFIX LTD</h1>
           <p className="mt-4 text-lg text-brand-blue-200">Your trusted partner in repair and maintenance since 2010.</p>
         </div>
       </div>

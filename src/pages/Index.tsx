@@ -17,10 +17,12 @@ const Index = () => {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="bg-brand-blue-50 py-20 md:py-32">
-        <div className="container text-center">
-          <h1 className="text-4xl md:text-6xl font-bold font-heading mb-4 leading-tight">Fast, Reliable Repairs.</h1>
-          <p className="text-lg md:text-xl text-brand-blue-800 max-w-3xl mx-auto mb-8">
+      <section
+          className="bg-cover bg-center bg-no-repeat py-20 md:py-32"
+          style={{ backgroundImage: "url('/Cover.jpg')" }}
+      >        <div className="container text-center">
+          <h1 className="text-4xl md:text-6xl font-bold font-heading mb-4 leading-tight text-white">Fast, Reliable Repairs.</h1>
+          <p className="text-lg md:text-xl text-white max-w-3xl mx-auto mb-8">
             Your trusted partner for 24/7 emergency response and expert maintenance across 12 essential service categories.
           </p>
           <div className="flex justify-center gap-4">
