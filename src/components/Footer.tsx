@@ -25,8 +25,8 @@ const Footer = () => {
           <div>
             <h3 className="font-heading text-lg font-semibold text-brand-yellow-400 mb-4">Contact Info</h3>
             <ul className="space-y-3 text-brand-blue-200">
-              <li className="flex items-start gap-3"><MapPin className="h-5 w-5 mt-1 text-brand-yellow-400" /><span>123 Fixit Lane, Repairtown, RT 54321</span></li>
-              <li className="flex items-center gap-3"><Phone className="h-5 w-5 text-brand-yellow-400" /><a href="tel:123-456-7890" className="hover:text-brand-yellow-400 transition-colors">123-456-7890</a></li>
+              <li className="flex items-start gap-3"><MapPin className="h-5 w-5 mt-1 text-brand-yellow-400" /><span>Lissane East, Clarecastle, Co. Clare</span></li>
+              <li className="flex items-center gap-3"><Phone className="h-5 w-5 text-brand-yellow-400" /><a href="tel:+353 (86) 8758890" className="hover:text-brand-yellow-400 transition-colors">+353 (86) 8758890</a></li>
               <li className="flex items-center gap-3"><Mail className="h-5 w-5 text-brand-yellow-400" /><a href="mailto:contact@wefixltd.com" className="hover:text-brand-yellow-400 transition-colors">contact@wefixltd.com</a></li>
             </ul>
           </div>
