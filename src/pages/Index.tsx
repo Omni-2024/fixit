@@ -3,18 +3,229 @@ import { Button } from "@/components/ui/button";
 import ServiceCard from "@/components/ServiceCard";
 import { ArrowRight, Zap, Droplets, Wrench, Heater, Bug, Wind, ShieldCheck, Star } from "lucide-react";
 import { Link } from "react-router-dom";
+import {useState} from "react";
 
 const services = [
-  { icon: <Heater size={28} />, title: "Heating", description: "Reliable heating and furnace repairs." },
-  { icon: <Droplets size={28} />, title: "Plumbing", description: "From leaky faucets to burst pipes." },
-  { icon: <Zap size={28} />, title: "Electrics", description: "Safe and certified electrical solutions." },
-  { icon: <Bug size={28} />, title: "Pest Control", description: "Effective and discreet pest removal." },
-  { icon: <Wind size={28} />, title: "Air Conditioning", description: "AC repair, installation, and maintenance." },
-  { icon: <Wrench size={28} />, title: "General Repairs", description: "Handyman services for all your needs." },
+    {
+        title: "Heating & Gas",
+        icon: <Heater size={28} />,
+        description: "Reliable heating and furnace repairs.",
+        rates: {
+            weekday: {
+                "07-19": 130,
+                "19-24": 165,
+                "00-07": 225,
+            },
+            weekend: {
+                "07-19": 155,
+                "19-24": 185,
+                "00-07": 255,
+            },
+        },
+    },
+    {
+        title: "Plumbing",
+        icon: <Droplets size={28} />,
+        description: "From leaky faucets to burst pipes.",
+        rates: {
+            weekday: {
+                "07-19": 130,
+                "19-24": 155,
+                "00-07": 225,
+            },
+            weekend: {
+                "07-19": 155,
+                "19-24": 185,
+                "00-07": 255,
+            },
+        },
+    },
+    {
+        title: "Commercial Heating & Gas",
+        icon: <Heater size={28} />,
+        description: "Commercial heating services for businesses.",
+        rates: {
+            weekday: {
+                "07-19": 165,
+                "19-24": 205,
+                "00-07": 250,
+            },
+            weekend: {
+                "07-19": 185,
+                "19-24": 205,
+                "00-07": 275,
+            },
+        },
+    },
+    {
+        title: "Electrics",
+        icon: <Zap size={28} />,
+        description: "Safe and certified electrical solutions.",
+        rates: {
+            weekday: {
+                "07-19": 110,
+                "19-24": 145,
+                "00-07": 205,
+            },
+            weekend: {
+                "07-19": 145,
+                "19-24": 175,
+                "00-07": 245,
+            },
+        },
+    },
+    {
+        title: "Air Conditioning",
+        icon: <Wind size={28} />,
+        description: "AC repair, installation, and maintenance.",
+        rates: {
+            weekday: null, // Not specified
+            weekend: {
+                "07-19": 155,
+                "19-24": 185,
+                "00-07": 255,
+            },
+        },
+    },
+    {
+        title: "Carpentry",
+        icon: <Wrench size={28} />,
+        description: "Expert carpentry services.",
+        rates: {
+            weekday: {
+                "07-19": 110,
+                "19-24": 145,
+                "00-07": 205,
+            },
+            weekend: {
+                "07-19": 145,
+                "19-24": 175,
+                "00-07": 245,
+            },
+        },
+    },
+    {
+        title: "Building Works",
+        icon: <Wrench size={28} />,
+        description: "General building and renovation work.",
+        rates: {
+            weekday: {
+                "07-19": 110,
+                "19-24": 145,
+                "00-07": 205,
+            },
+            weekend: {
+                "07-19": 145,
+                "19-24": 175,
+                "00-07": 245,
+            },
+        },
+    },
+    {
+        title: "Pest Control",
+        icon: <Bug size={28} />,
+        description: "Effective and discreet pest removal.",
+        rates: {
+            weekday: null,
+            weekend: {
+                "07-19": 145,
+                "19-24": 175,
+                "00-07": 245,
+            },
+        },
+    },
+    {
+        title: "Jetting (Drains)",
+        icon: <Droplets size={28} />,
+        description: "Professional drain jetting services.",
+        rates: {
+            weekday: {
+                "07-19": 160,
+                "19-24": 195,
+                "00-07": 225,
+            },
+            weekend: {
+                "07-19": 185,
+                "19-24": 215,
+                "00-07": 285,
+            },
+        },
+    },
+    {
+        title: "Roofing",
+        icon: <Wind size={28} />,
+        description: "Expert roofing repairs and installations.",
+        rates: {
+            weekday: {
+                "07-19": 110,
+                "19-24": 145,
+                "00-07": 205,
+            },
+            weekend: {
+                "07-19": 145,
+                "19-24": 175,
+                "00-07": 245,
+            },
+        },
+    },
+    {
+        title: "Boiler Service",
+        icon: <Heater size={28} />,
+        description: "Professional boiler servicing.",
+        rates: {
+            weekday: {
+                "07-19": 125,
+                "19-24": 165,
+                "00-07": null, // Not available
+            },
+            weekend: {
+                "07-19": 155,
+                "19-24": 185,
+                "00-07": null,
+            },
+        },
+    },
+    {
+        title: "Gas Safety Certificate",
+        icon: <Zap size={28} />,
+        description: "Certified gas safety inspections.",
+        rates: {
+            weekday: {
+                "07-19": 125,
+                "19-24": 165,
+                "00-07": null,
+            },
+            weekend: {
+                "07-19": 155,
+                "19-24": 185,
+                "00-07": null,
+            },
+        },
+    },
+    {
+        title: "Boiler Service & Gas Certificate",
+        icon: <Heater size={28} />,
+        description: "Full boiler servicing and certification.",
+        rates: {
+            weekday: {
+                "07-19": 230,
+                "19-24": 310,
+                "00-07": null,
+            },
+            weekend: {
+                "07-19": 290,
+                "19-24": 350,
+                "00-07": null,
+            },
+        },
+    },
 ];
 
+
 const Index = () => {
-  return (
+    const [activeRate, setActiveRate] = useState<"weekday" | "weekend">("weekday");
+
+    return (
     <div className="flex flex-col">
       {/* Hero Section */}
       <section
@@ -43,11 +254,43 @@ const Index = () => {
             <h2 className="text-3xl md:text-4xl font-bold font-heading">Our Core Services</h2>
             <p className="text-lg text-muted-foreground mt-2 max-w-2xl mx-auto">We handle everything from emergencies to routine maintenance.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service) => (
-              <ServiceCard key={service.title} {...service} />
-            ))}
-          </div>
+            <div className="flex justify-center mb-8">
+                <div className="inline-flex items-center bg-gray-100 rounded-full p-1">
+                    <button
+                        onClick={() => setActiveRate("weekday")}
+                        className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-300 ${
+                            activeRate === "weekday"
+                                ? "bg-brand-yellow-400 text-brand-blue-900"
+                                : "text-gray-700 hover:text-brand-blue-700"
+                        }`}
+                    >
+                        Weekday Rates
+                    </button>
+                    <button
+                        onClick={() => setActiveRate("weekend")}
+                        className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-300 ${
+                            activeRate === "weekend"
+                                ? "bg-brand-yellow-400 text-brand-blue-900"
+                                : "text-gray-700 hover:text-brand-blue-700"
+                        }`}
+                    >
+                        Weekend Rates
+                    </button>
+                </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {services.map((service) => (
+                    <ServiceCard
+                        key={service.title}
+                        icon={service.icon}
+                        title={service.title}
+                        description={service.description}
+                        rates={service.rates}
+                        activeRate={activeRate}
+                    />
+                ))}
+            </div>
         </div>
       </section>
 
