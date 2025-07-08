@@ -29,7 +29,7 @@ const Header = () => {
             key={label}
             href={to}
             onClick={(e) => handleScroll(e, targetId)}
-            className={`transition-colors hover:text-brand-yellow-400 ${
+            className={`transition-colors hover:text-brand-yellow-100 ${
               isMobile ? "block py-2 text-lg" : ""
             }`}
           >
@@ -42,8 +42,8 @@ const Header = () => {
           key={label}
           to={to}
           className={({ isActive }) =>
-            `transition-colors hover:text-brand-yellow-400 ${
-              isActive ? "text-brand-yellow-400" : ""
+            `transition-colors hover:text-brand-yellow-100 ${
+              isActive ? "text-brand-yellow-100" : ""
             } ${isMobile ? "block py-2 text-lg" : ""}`
           }
         >
@@ -64,7 +64,7 @@ const Header = () => {
           {renderNavLinks()}
         </nav>
         <div className="flex items-center gap-2">
-          <Button asChild className="hidden sm:inline-flex bg-brand-yellow-400 hover:bg-brand-yellow-500 text-brand-blue-900">
+          <Button asChild className="hidden sm:inline-flex bg-brand-yellow-100 hover:bg-brand-yellow-100 text-brand-primary-100">
             <a href="tel:+1234567890">Call for Help</a>
           </Button>
           <Sheet>

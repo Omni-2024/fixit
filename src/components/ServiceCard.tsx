@@ -22,9 +22,9 @@ const ServiceCard = ({ icon, title, description, rates, activeRate,longDescripti
     const price = rateObject?.["07-19"] ?? "N/A";
 
     return (
-        <Card className="group transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:border-brand-yellow-400 relative">
+        <Card className="group transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:border-brand-yellow-100 relative">
             <CardHeader className="flex flex-row items-center gap-4">
-                <div className="text-brand-blue-700 bg-brand-blue-100 p-3 rounded-lg">
+                <div className="text-brand-secondary-50 bg-brand-primary-100 p-3 rounded-lg">
                     {icon}
                 </div>
                 <CardTitle className="text-xl">{title}</CardTitle>
@@ -34,7 +34,7 @@ const ServiceCard = ({ icon, title, description, rates, activeRate,longDescripti
                 <div className="flex items-center justify-between">
                     <a
                         onClick={onLearnMore}
-                        className="cursor-pointer font-semibold text-brand-blue-700 group-hover:text-brand-yellow-500 flex items-center gap-2"
+                        className="cursor-pointer font-semibold text-brand-primary-100  flex items-center gap-2"
                     >
                         Learn More <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </a>

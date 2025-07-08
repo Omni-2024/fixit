@@ -52,7 +52,7 @@ const ServiceModal = ({
                             <Dialog.Panel className="w-full max-w-lg transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
                                 <div className="flex items-center justify-between mb-4">
                                     <div className="flex items-center gap-3">
-                                        <div className="text-brand-blue-700 bg-brand-blue-100 p-3 rounded-lg">
+                                        <div className="text-brand-secondary-50 bg-brand-primary-100 p-3 rounded-lg">
                                             {icon}
                                         </div>
                                         <Dialog.Title

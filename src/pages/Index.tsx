@@ -170,10 +170,10 @@ const Index = () => {
             Your trusted partner for 24/7 emergency response and expert maintenance across 12 essential service categories.
           </p>
           <div className="flex justify-center gap-4">
-            <Button size="lg" className="bg-brand-yellow-400 hover:bg-brand-yellow-500 text-brand-blue-900" asChild>
+            <Button size="lg" className="bg-brand-yellow-100 hover:bg-brand-yellow-500 text-brand-primary-100" asChild>
               <a href="#services">Explore Services</a>
             </Button>
-            <Button size="lg" variant="outline" className="border-brand-blue-700 text-brand-blue-700 hover:bg-brand-blue-100 hover:text-brand-blue-800" asChild>
+            <Button size="lg" variant="outline" className="border-brand-primary-100 text-brand-blue-700 hover:bg-brand-blue-100 hover:text-brand-blue-800" asChild>
               <Link to="/contact">Book Now <ArrowRight className="ml-2 h-5 w-5" /></Link>
             </Button>
           </div>
@@ -193,8 +193,8 @@ const Index = () => {
                         onClick={() => setActiveRate("weekday")}
                         className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-300 ${
                             activeRate === "weekday"
-                                ? "bg-brand-yellow-400 text-brand-blue-900"
-                                : "text-gray-700 hover:text-brand-blue-700"
+                                ? "bg-brand-yellow-100 text-brand-primary-100"
+                                : "text-gray-700 hover:text-brand-primary-100"
                         }`}
                     >
                         Weekday Rates
@@ -203,8 +203,8 @@ const Index = () => {
                         onClick={() => setActiveRate("weekend")}
                         className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-300 ${
                             activeRate === "weekend"
-                                ? "bg-brand-yellow-400 text-brand-blue-900"
-                                : "text-gray-700 hover:text-brand-blue-700"
+                                ? "bg-brand-yellow-100 text-brand-primary-100"
+                                : "text-gray-700 hover:text-brand-primary-100"
                         }`}
                     >
                         Weekend Rates
@@ -231,14 +231,14 @@ const Index = () => {
       </section>
 
       {/* Customer Feedback Section */}
-      <section className="bg-brand-blue-50 py-20 md:py-28">
+      <section className="bg-brand-primary-100 py-20 md:py-28">
         <div className="container text-center">
-          <h2 className="text-3xl md:text-4xl font-bold font-heading">Trusted by Homeowners</h2>
+          <h2 className="text-3xl md:text-4xl font-bold font-heading text-brand-secondary-50">Trusted by Homeowners</h2>
           <p className="text-lg text-muted-foreground mt-2 max-w-2xl mx-auto mb-12">Don't just take our word for it. Here's what our clients say.</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[1, 2, 3].map(i => (
               <div key={i} className="bg-white p-6 rounded-lg shadow-sm text-left">
-                <div className="flex text-brand-yellow-400 mb-2">
+                <div className="flex text-brand-yellow-100 mb-2">
                   {[...Array(5)].map((_, star) => <Star key={star} fill="currentColor" className="h-5 w-5" />)}
                 </div>
                 <p className="text-gray-800 font-semibold mb-2">"Incredibly fast response! The plumber fixed our issue in under an hour. Highly recommend."</p>
@@ -253,14 +253,14 @@ const Index = () => {
       <section className="py-20 md:py-28 bg-white">
         <div className="container grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold font-heading mb-4">Your Local Repair Experts</h2>
+            <h2 className="text-3xl md:text-4xl font-bold font-heading mb-4 text-brand-primary-100">Your Local Repair Experts</h2>
             <p className="text-muted-foreground mb-4 text-lg">
               For over a decade, WEFIX LTD has been the go-to provider for emergency and maintenance services. Our mission is simple: to provide top-quality workmanship and unmatched customer service, ensuring your peace of mind.
             </p>
             <p className="text-muted-foreground mb-6">
               Our certified technicians are equipped with the best tools and a commitment to getting the job done right the first time.
             </p>
-            <Button size="lg" asChild>
+            <Button className="bg-brand-primary-100" size="lg" asChild>
               <Link to="/about">Learn More About Us</Link>
             </Button>
           </div>

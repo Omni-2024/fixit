@@ -9,10 +9,10 @@ const Contact = () => {
   return (
     <div>
       {/* Page Header */}
-      <div className="bg-brand-blue-950 text-white py-20">
+      <div className="bg-brand-primary-100 text-white py-20">
         <div className="container text-center">
           <h1 className="text-4xl md:text-5xl font-bold font-heading text-white">Get In Touch</h1>
-          <p className="mt-4 text-lg text-brand-blue-200">We're here to help, 24/7. Reach out to us anytime.</p>
+          <p className="mt-4 text-lg text-brand-secondary-100">We're here to help, 24/7. Reach out to us anytime.</p>
         </div>
       </div>
 
@@ -23,32 +23,32 @@ const Contact = () => {
             <h2 className="text-3xl font-bold font-heading mb-6">Contact Information</h2>
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <div className="bg-brand-blue-100 p-3 rounded-full text-brand-blue-700">
+                <div className="bg-brand-primary-100 p-3 rounded-full text-brand-secondary-50">
                   <Phone className="h-6 w-6" />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold">Phone</h3>
                   <p className="text-muted-foreground">For emergencies or direct contact.</p>
-                  <a href="tel:123-456-7890" className="text-brand-blue-700 font-medium hover:underline">123-456-7890</a>
+                  <a href="tel:+353 (86) 8758890" className="text-brand-primary-100 font-medium hover:underline">+353 (86) 8758890</a>
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <div className="bg-brand-blue-100 p-3 rounded-full text-brand-blue-700">
+                <div className="bg-brand-primary-100 p-3 rounded-full text-brand-secondary-50">
                   <Mail className="h-6 w-6" />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold">Email</h3>
                   <p className="text-muted-foreground">For inquiries and quotes.</p>
-                  <a href="mailto:contact@wefixltd.com" className="text-brand-blue-700 font-medium hover:underline">contact@wefixltd.com</a>
+                  <a href="mailto:contact@wefixltd.com" className="text-brand-primary-100 font-medium hover:underline">contact@wefixltd.com</a>
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <div className="bg-brand-blue-100 p-3 rounded-full text-brand-blue-700">
+                <div className="bg-brand-primary-100 p-3 rounded-full text-brand-secondary-50">
                   <MapPin className="h-6 w-6" />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold">Office Address</h3>
-                  <p className="text-muted-foreground">123 Fixit Lane, Repairtown, RT 54321</p>
+                  <p className=" text-brand-primary-100">Lissane East, Clarecastle, Co. Clare</p>
                 </div>
               </div>
             </div>
@@ -74,7 +74,7 @@ const Contact = () => {
                 <Label htmlFor="message">Message</Label>
                 <Textarea id="message" placeholder="Tell us more about your issue..." />
               </div>
-              <Button type="submit" size="lg" className="w-full">Submit Inquiry</Button>
+              <Button  type="submit" size="lg" className="w-full bg-brand-primary-100">Submit Inquiry</Button>
             </form>
           </div>
         </div>

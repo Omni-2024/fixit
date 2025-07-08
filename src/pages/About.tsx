@@ -5,10 +5,10 @@ const About = () => {
   return (
     <div className="bg-white">
       {/* Page Header */}
-      <div className="bg-brand-blue-950 text-white py-20">
+      <div className="bg-brand-primary-100 text-white py-20">
         <div className="container text-center">
           <h1 className="text-4xl md:text-5xl font-bold font-heading text-white">About WEFIX LTD</h1>
-          <p className="mt-4 text-lg text-brand-blue-200">Your trusted partner in repair and maintenance since 2010.</p>
+          <p className="mt-4 text-lg text-brand-secondary-100">Your trusted partner in repair and maintenance since 2010.</p>
         </div>
       </div>
 
@@ -34,17 +34,17 @@ const About = () => {
           <h2 className="text-3xl font-bold font-heading text-center mb-12">Our Core Values</h2>
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div className="p-6">
-              <Heart className="h-12 w-12 mx-auto text-brand-blue-700 mb-4" />
+              <Heart className="h-12 w-12 mx-auto text-brand-primary-100 mb-4" />
               <h3 className="text-xl font-bold font-heading mb-2">Customer First</h3>
               <p className="text-muted-foreground">We prioritize your needs and satisfaction above all else, ensuring a seamless and positive experience.</p>
             </div>
             <div className="p-6">
-              <ShieldCheck className="h-12 w-12 mx-auto text-brand-blue-700 mb-4" />
+              <ShieldCheck className="h-12 w-12 mx-auto text-brand-primary-100 mb-4" />
               <h3 className="text-xl font-bold font-heading mb-2">Quality & Safety</h3>
               <p className="text-muted-foreground">Our certified technicians adhere to the highest standards of quality and safety on every job.</p>
             </div>
             <div className="p-6">
-              <Target className="h-12 w-12 mx-auto text-brand-blue-700 mb-4" />
+              <Target className="h-12 w-12 mx-auto text-brand-primary-100 mb-4" />
               <h3 className="text-xl font-bold font-heading mb-2">Integrity</h3>
               <p className="text-muted-foreground">We believe in transparent pricing, honest communication, and professional conduct.</p>
             </div>
