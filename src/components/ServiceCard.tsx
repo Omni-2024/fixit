@@ -7,14 +7,17 @@ interface ServiceCardProps {
     icon: React.ReactNode;
     title: string;
     description: string;
+    longDescription: string;
     rates: {
         weekday: Record<string, number | null> | null;
         weekend: Record<string, number | null> | null;
     };
     activeRate: "weekday" | "weekend";
+    onLearnMore: () => void;
 }
 
-const ServiceCard = ({ icon, title, description, rates, activeRate }: ServiceCardProps) => {
+
+const ServiceCard = ({ icon, title, description, rates, activeRate,longDescription,onLearnMore }: ServiceCardProps) => {
     const rateObject = rates[activeRate];
     const price = rateObject?.["07-19"] ?? "N/A";
 
@@ -30,8 +33,8 @@ const ServiceCard = ({ icon, title, description, rates, activeRate }: ServiceCar
                 <p className="text-muted-foreground mb-4">{description}</p>
                 <div className="flex items-center justify-between">
                     <a
-                        href="#"
-                        className="font-semibold text-brand-blue-700 group-hover:text-brand-yellow-500 flex items-center gap-2"
+                        onClick={onLearnMore}
+                        className="cursor-pointer font-semibold text-brand-blue-700 group-hover:text-brand-yellow-500 flex items-center gap-2"
                     >
                         Learn More <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </a>
