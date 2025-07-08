@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Wrench } from "lucide-react";
 
+
 const navLinks = [
   { to: "/", label: "Home" },
   { to: "/#services", label: "Services" },
@@ -55,8 +56,9 @@ const Header = () => {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <NavLink to="/" className="flex items-center gap-2 font-bold text-xl">
-          <Wrench className="h-6 w-6 text-brand-blue-700" />
-          <span className="font-heading">WEFIX LTD</span>
+          {/*<Wrench className="h-6 w-6 text-brand-blue-700" />*/}
+          <img className="w-1/5" src="/logo.png" alt="Example" />
+          {/*<span className="font-heading">WEFIX LTD</span>*/}
         </NavLink>
         <nav className="hidden items-center gap-6 md:flex">
           {renderNavLinks()}
