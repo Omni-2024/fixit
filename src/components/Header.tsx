@@ -65,7 +65,7 @@ const Header = () => {
         </nav>
         <div className="flex items-center gap-2">
           <Button asChild className="hidden sm:inline-flex bg-brand-yellow-100 hover:bg-brand-yellow-100 text-brand-primary-100">
-            <a href="tel:+1234567890">Call for Help</a>
+            <a href="tel:+353 (86) 8758890">Call for Help</a>
           </Button>
           <Sheet>
             <SheetTrigger asChild>

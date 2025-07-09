@@ -169,15 +169,18 @@ const Index = () => {
           <p className="text-lg md:text-xl text-white max-w-3xl mx-auto mb-8">
             Your trusted partner for 24/7 emergency response and expert maintenance across 12 essential service categories.
           </p>
-          <div className="flex justify-center gap-4">
-            <Button size="lg" className="bg-brand-yellow-100 hover:bg-brand-yellow-500 text-brand-primary-100" asChild>
-              <a href="#services">Explore Services</a>
-            </Button>
-            <Button size="lg" variant="outline" className="border-brand-primary-100 text-brand-blue-700 hover:bg-brand-blue-100 hover:text-brand-blue-800" asChild>
-              <Link to="/contact">Book Now <ArrowRight className="ml-2 h-5 w-5" /></Link>
-            </Button>
+          <div className="flex justify-center">
+              <Button
+                  asChild
+                  className="bg-brand-yellow-100 hover:bg-brand-yellow-200 text-brand-primary-100 px-8 py-4 text-lg font-semibold shadow-md transition duration-300 hover:scale-105 hover:shadow-lg inline-flex items-center"
+              >
+                  <a href="tel:+353 (86) 8758890" className="flex items-center">
+                      Contact Us
+                      <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+                  </a>
+              </Button>
           </div>
-        </div>
+      </div>
       </section>
 
       {/* Services Section */}
