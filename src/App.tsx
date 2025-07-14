@@ -11,8 +11,9 @@ import NotFound from "./pages/NotFound";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ChatWidget from "./components/ChatWidget";
-import BottomNavigation from "@/components/ui/BottomNavigation.tsx";
+import BottomNavigation from "@/components/BottomNavigation.tsx";
 import ServiceDetailsPage from "@/pages/ServiceDetailsPage.tsx";
+import ServicesPage from "@/pages/ServicesPage.tsx";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,7 @@ const App = () => (
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/about" element={<About />} />
+              <Route path="/services" element={<ServicesPage />} />
               <Route path="/services/:slug" element={<ServiceDetailsPage />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="*" element={<NotFound />} />

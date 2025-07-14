@@ -1,4 +1,3 @@
-"use client"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -18,8 +17,8 @@ const ServiceDetailPage = () => {
         return (
                 <div className="container mx-auto px-4 py-16 text-center">
                     <h1 className="text-2xl font-bold mb-4">Service Not Found</h1>
-                    <Link to="/" className="text-brand-primary-100 hover:underline">
-                        ← Back to Home
+                    <Link to="/services" className="text-brand-primary-100 hover:underline">
+                        ← Back to Services
                     </Link>
                 </div>
         )
@@ -35,18 +34,18 @@ const ServiceDetailPage = () => {
                         Home
                     </Link>
                     <span>/</span>
-                    {/*<Link to="/services" className="hover:text-brand-primary-100">*/}
-                    {/*    Services*/}
-                    {/*</Link>*/}
-                    {/*<span>/</span>*/}
+                    <Link to="/services" className="hover:text-brand-primary-100">
+                        Services
+                    </Link>
+                    <span>/</span>
                     <span className="text-brand-primary-100">{service.title}</span>
                 </div>
 
                 {/* Back Button */}
                 <Button variant="outline" asChild className="mb-8 bg-transparent">
-                    <Link to="/" className="flex items-center gap-2">
+                    <Link to="/services" className="flex items-center gap-2">
                         <ArrowLeft className="h-4 w-4" />
-                        Back to Home
+                        Back to Services
                     </Link>
                 </Button>
 
