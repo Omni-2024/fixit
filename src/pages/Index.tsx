@@ -5,152 +5,153 @@ import { ArrowRight, Zap, Droplets, Wrench, Heater, Bug, Wind, ShieldCheck, Star
 import { Link } from "react-router-dom";
 import {useState} from "react";
 import ServiceModal from "@/components/ServiceModal.tsx";
+import {services} from "@/data/services.ts";
 
-const services = [
-    {
-        title: "Heating & Gas",
-        icon: <Heater size={28} />,
-        description: "Reliable heating and furnace repairs.",
-        longDescription:
-            "Installation, repair and maintenance of boilers (combi, system, open-vent), radiators, thermostats and room controls; system flushing; pump replacement; commercial heating solutions.",
-        rates: {
-            weekday: { "07-19": 130, "19-24": 165, "00-07": 225 },
-            weekend: { "07-19": 155, "19-24": 185, "00-07": 255 },
-        },
-    },
-    {
-        title: "Plumbing",
-        icon: <Droplets size={28} />,
-        description: "From leaky faucets to burst pipes.",
-        longDescription:
-            "Leak detection and repair; blockages (sinks, toilets, pipes); bathroom and kitchen refurbishments; cylinder and cistern works; pipework installation/replacement; immersion heaters; pump servicing; gutter and downpipe repair.",
-        rates: {
-            weekday: { "07-19": 130, "19-24": 155, "00-07": 225 },
-            weekend: { "07-19": 155, "19-24": 185, "00-07": 255 },
-        },
-    },
-    {
-        title: "Commercial Heating & Gas",
-        icon: <Heater size={28} />,
-        description: "Commercial heating services for businesses.",
-        longDescription:
-            "All heating & gas services scaled for commercial premises, including industrial boilers, high-capacity radiators, system design and compliance certifying.",
-        rates: {
-            weekday: { "07-19": 165, "19-24": 205, "00-07": 250 },
-            weekend: { "07-19": 185, "19-24": 205, "00-07": 275 },
-        },
-    },
-    {
-        title: "Electrics",
-        icon: <Zap size={28} />,
-        description: "Safe and certified electrical solutions.",
-        longDescription:
-            "Full rewiring; fuse-box upgrades; new circuits and socket installations; lighting and security systems; appliance installation; PAT testing; condition reports; commercial electrical works.",
-        rates: {
-            weekday: { "07-19": 110, "19-24": 145, "00-07": 205 },
-            weekend: { "07-19": 145, "19-24": 175, "00-07": 245 },
-        },
-    },
-    {
-        title: "Air Conditioning",
-        icon: <Wind size={28} />,
-        description: "AC repair, installation, and maintenance.",
-        longDescription:
-            "Installation, servicing, and repair of air conditioning units, split systems, ducted units, and commercial cooling solutions.",
-        rates: {
-            weekday: null,
-            weekend: { "07-19": 155, "19-24": 185, "00-07": 255 },
-        },
-    },
-    {
-        title: "Carpentry",
-        icon: <Wrench size={28} />,
-        description: "Expert carpentry services.",
-        longDescription:
-            "Structural repairs (doors, windows, staircases, flooring); bespoke joinery (cupboards, units); emergency boarding; interior fittings; timber treatment and finishing.",
-        rates: {
-            weekday: { "07-19": 110, "19-24": 145, "00-07": 205 },
-            weekend: { "07-19": 145, "19-24": 175, "00-07": 245 },
-        },
-    },
-    {
-        title: "Building Works",
-        icon: <Wrench size={28} />,
-        description: "General building and renovation work.",
-        longDescription:
-            "Brickwork, plastering, masonry repointing; extensions and renovations; loft conversions; external render; demolition; site cleanup and preparation.",
-        rates: {
-            weekday: { "07-19": 110, "19-24": 145, "00-07": 205 },
-            weekend: { "07-19": 145, "19-24": 175, "00-07": 245 },
-        },
-    },
-    {
-        title: "Pest Control",
-        icon: <Bug size={28} />,
-        description: "Effective and discreet pest removal.",
-        longDescription:
-            "Identification, treatment and prevention of common pests including rodents, insects and birds using humane and environmentally friendly solutions.",
-        rates: {
-            weekday: null,
-            weekend: { "07-19": 145, "19-24": 175, "00-07": 245 },
-        },
-    },
-    {
-        title: "Jetting (Drains)",
-        icon: <Droplets size={28} />,
-        description: "Professional drain jetting services.",
-        longDescription:
-            "High-pressure drain jetting; CCTV drain surveys; drain lining and relining.",
-        rates: {
-            weekday: { "07-19": 160, "19-24": 195, "00-07": 225 },
-            weekend: { "07-19": 185, "19-24": 215, "00-07": 285 },
-        },
-    },
-    {
-        title: "Roofing",
-        icon: <Wind size={28} />,
-        description: "Expert roofing repairs and installations.",
-        longDescription:
-            "Emergency leaks; full re-roofing (slate, tile, flat); leadwork; rooflight/Velux installation; gutter, fascia and soffit replacement; chimney repairs.",
-        rates: {
-            weekday: { "07-19": 110, "19-24": 145, "00-07": 205 },
-            weekend: { "07-19": 145, "19-24": 175, "00-07": 245 },
-        },
-    },
-    {
-        title: "Boiler Service",
-        icon: <Heater size={28} />,
-        description: "Professional boiler servicing.",
-        longDescription:
-            "Annual servicing and maintenance of boilers to ensure safety, efficiency and compliance with regulations.",
-        rates: {
-            weekday: { "07-19": 125, "19-24": 165, "00-07": null },
-            weekend: { "07-19": 155, "19-24": 185, "00-07": null },
-        },
-    },
-    {
-        title: "Gas Safety Certificate",
-        icon: <Zap size={28} />,
-        description: "Certified gas safety inspections.",
-        longDescription:
-            "Annual servicing, safety inspection, efficiency testing; supply of Gas Safe certificate for compliance and insurance purposes.",
-        rates: {
-            weekday: { "07-19": 125, "19-24": 165, "00-07": null },
-            weekend: { "07-19": 155, "19-24": 185, "00-07": null },
-        },
-    },
-    {
-        title: "Boiler Service & Gas Certificate",
-        icon: <Heater size={28} />,
-        description: "Full boiler servicing and certification.",
-        longDescription:
-            "Annual servicing, safety inspection, efficiency testing; supply of Gas Safe certificate for compliance and insurance purposes.",
-        rates: {
-            weekday: { "07-19": 230, "19-24": 310, "00-07": null },
-            weekend: { "07-19": 290, "19-24": 350, "00-07": null },
-        },
-    },
-];
+// const services = [
+//     {
+//         title: "Heating & Gas",
+//         icon: <Heater size={28} />,
+//         description: "Reliable heating and furnace repairs.",
+//         longDescription:
+//             "Installation, repair and maintenance of boilers (combi, system, open-vent), radiators, thermostats and room controls; system flushing; pump replacement; commercial heating solutions.",
+//         rates: {
+//             weekday: { "07-19": 130, "19-24": 165, "00-07": 225 },
+//             weekend: { "07-19": 155, "19-24": 185, "00-07": 255 },
+//         },
+//     },
+//     {
+//         title: "Plumbing",
+//         icon: <Droplets size={28} />,
+//         description: "From leaky faucets to burst pipes.",
+//         longDescription:
+//             "Leak detection and repair; blockages (sinks, toilets, pipes); bathroom and kitchen refurbishments; cylinder and cistern works; pipework installation/replacement; immersion heaters; pump servicing; gutter and downpipe repair.",
+//         rates: {
+//             weekday: { "07-19": 130, "19-24": 155, "00-07": 225 },
+//             weekend: { "07-19": 155, "19-24": 185, "00-07": 255 },
+//         },
+//     },
+//     {
+//         title: "Commercial Heating & Gas",
+//         icon: <Heater size={28} />,
+//         description: "Commercial heating services for businesses.",
+//         longDescription:
+//             "All heating & gas services scaled for commercial premises, including industrial boilers, high-capacity radiators, system design and compliance certifying.",
+//         rates: {
+//             weekday: { "07-19": 165, "19-24": 205, "00-07": 250 },
+//             weekend: { "07-19": 185, "19-24": 205, "00-07": 275 },
+//         },
+//     },
+//     {
+//         title: "Electrics",
+//         icon: <Zap size={28} />,
+//         description: "Safe and certified electrical solutions.",
+//         longDescription:
+//             "Full rewiring; fuse-box upgrades; new circuits and socket installations; lighting and security systems; appliance installation; PAT testing; condition reports; commercial electrical works.",
+//         rates: {
+//             weekday: { "07-19": 110, "19-24": 145, "00-07": 205 },
+//             weekend: { "07-19": 145, "19-24": 175, "00-07": 245 },
+//         },
+//     },
+//     {
+//         title: "Air Conditioning",
+//         icon: <Wind size={28} />,
+//         description: "AC repair, installation, and maintenance.",
+//         longDescription:
+//             "Installation, servicing, and repair of air conditioning units, split systems, ducted units, and commercial cooling solutions.",
+//         rates: {
+//             weekday: null,
+//             weekend: { "07-19": 155, "19-24": 185, "00-07": 255 },
+//         },
+//     },
+//     {
+//         title: "Carpentry",
+//         icon: <Wrench size={28} />,
+//         description: "Expert carpentry services.",
+//         longDescription:
+//             "Structural repairs (doors, windows, staircases, flooring); bespoke joinery (cupboards, units); emergency boarding; interior fittings; timber treatment and finishing.",
+//         rates: {
+//             weekday: { "07-19": 110, "19-24": 145, "00-07": 205 },
+//             weekend: { "07-19": 145, "19-24": 175, "00-07": 245 },
+//         },
+//     },
+//     {
+//         title: "Building Works",
+//         icon: <Wrench size={28} />,
+//         description: "General building and renovation work.",
+//         longDescription:
+//             "Brickwork, plastering, masonry repointing; extensions and renovations; loft conversions; external render; demolition; site cleanup and preparation.",
+//         rates: {
+//             weekday: { "07-19": 110, "19-24": 145, "00-07": 205 },
+//             weekend: { "07-19": 145, "19-24": 175, "00-07": 245 },
+//         },
+//     },
+//     {
+//         title: "Pest Control",
+//         icon: <Bug size={28} />,
+//         description: "Effective and discreet pest removal.",
+//         longDescription:
+//             "Identification, treatment and prevention of common pests including rodents, insects and birds using humane and environmentally friendly solutions.",
+//         rates: {
+//             weekday: null,
+//             weekend: { "07-19": 145, "19-24": 175, "00-07": 245 },
+//         },
+//     },
+//     {
+//         title: "Jetting (Drains)",
+//         icon: <Droplets size={28} />,
+//         description: "Professional drain jetting services.",
+//         longDescription:
+//             "High-pressure drain jetting; CCTV drain surveys; drain lining and relining.",
+//         rates: {
+//             weekday: { "07-19": 160, "19-24": 195, "00-07": 225 },
+//             weekend: { "07-19": 185, "19-24": 215, "00-07": 285 },
+//         },
+//     },
+//     {
+//         title: "Roofing",
+//         icon: <Wind size={28} />,
+//         description: "Expert roofing repairs and installations.",
+//         longDescription:
+//             "Emergency leaks; full re-roofing (slate, tile, flat); leadwork; rooflight/Velux installation; gutter, fascia and soffit replacement; chimney repairs.",
+//         rates: {
+//             weekday: { "07-19": 110, "19-24": 145, "00-07": 205 },
+//             weekend: { "07-19": 145, "19-24": 175, "00-07": 245 },
+//         },
+//     },
+//     {
+//         title: "Boiler Service",
+//         icon: <Heater size={28} />,
+//         description: "Professional boiler servicing.",
+//         longDescription:
+//             "Annual servicing and maintenance of boilers to ensure safety, efficiency and compliance with regulations.",
+//         rates: {
+//             weekday: { "07-19": 125, "19-24": 165, "00-07": null },
+//             weekend: { "07-19": 155, "19-24": 185, "00-07": null },
+//         },
+//     },
+//     {
+//         title: "Gas Safety Certificate",
+//         icon: <Zap size={28} />,
+//         description: "Certified gas safety inspections.",
+//         longDescription:
+//             "Annual servicing, safety inspection, efficiency testing; supply of Gas Safe certificate for compliance and insurance purposes.",
+//         rates: {
+//             weekday: { "07-19": 125, "19-24": 165, "00-07": null },
+//             weekend: { "07-19": 155, "19-24": 185, "00-07": null },
+//         },
+//     },
+//     {
+//         title: "Boiler Service & Gas Certificate",
+//         icon: <Heater size={28} />,
+//         description: "Full boiler servicing and certification.",
+//         longDescription:
+//             "Annual servicing, safety inspection, efficiency testing; supply of Gas Safe certificate for compliance and insurance purposes.",
+//         rates: {
+//             weekday: { "07-19": 230, "19-24": 310, "00-07": null },
+//             weekend: { "07-19": 290, "19-24": 350, "00-07": null },
+//         },
+//     },
+// ];
 
 
 const Index = () => {
@@ -228,13 +229,14 @@ const Index = () => {
                 {services.map((service) => (
                     <ServiceCard
                         key={service.title}
-                        icon={service.icon}
+                        icon={<service.icon/>}
                         title={service.title}
                         description={service.description}
                         longDescription={service.longDescription}
                         rates={service.rates}
                         activeRate={activeRate}
                         onLearnMore={() => setSelectedService(service)}
+                        slug={service.slug}
                     />
 
                 ))}
