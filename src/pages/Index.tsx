@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import ServiceCard from "@/components/ServiceCard";
-import { ArrowRight, Zap, Droplets, Wrench, Heater, Bug, Wind, ShieldCheck, Star } from "lucide-react";
+import { ArrowRight, Zap, Droplets, Wrench, Heater, Bug, Wind, ShieldCheck, Star,Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import {useState} from "react";
 import ServiceModal from "@/components/ServiceModal.tsx";
@@ -161,29 +161,38 @@ const Index = () => {
     return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section
-          className="bg-cover bg-center bg-no-repeat py-20 md:py-32"
-          style={{ backgroundImage: "url('/Cover.jpg')" }}
-      >        <div className="container text-center">
-          <h1 className="text-4xl md:text-6xl font-bold font-heading mb-4 leading-tight text-white">Fast, Reliable Repairs.</h1>
-          <p className="text-lg md:text-xl text-white max-w-3xl mx-auto mb-8">
-            Your trusted partner for 24/7 emergency response and expert maintenance across 12 essential service categories.
-          </p>
-          <div className="flex justify-center">
-              <Button
-                  asChild
-                  className="bg-brand-yellow-100 hover:bg-brand-yellow-200 text-brand-primary-100 px-8 py-4 text-lg font-semibold shadow-md transition duration-300 hover:scale-105 hover:shadow-lg inline-flex items-center"
-              >
-                  <a href="tel:+353 (86) 8758890" className="flex items-center">
-                      Contact Us
-                      <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
-                  </a>
-              </Button>
-          </div>
-      </div>
-      </section>
+        <section
+            className="relative w-full bg-cover bg-center bg-no-repeat md:aspect-[3/1] min-h-[500px]"
+            style={{ backgroundImage: "url('/BG.jpg')" }}
+        >
+            {/* Dark Overlay */}
+            <div className="absolute inset-0 bg-black bg-opacity-40"></div>
 
-      {/* Services Section */}
+            {/* Content */}
+            <div className="absolute inset-0 flex flex-col justify-center items-center px-4 text-center z-10">
+                <h1 className="text-4xl md:text-6xl font-bold font-heading mb-4 leading-tight text-white">
+                    Fast, Reliable Repairs.
+                </h1>
+                <p className="text-lg md:text-xl text-white max-w-3xl mx-auto mb-8">
+                    Your trusted partner for 24/7 emergency response and expert maintenance across 12 essential service categories.
+                </p>
+                <div className="flex justify-center">
+                    <Button
+                        asChild
+                        className="bg-brand-yellow-100 hover:bg-brand-yellow-200 text-brand-primary-100 px-8 py-4 text-lg font-semibold shadow-md transition duration-300 hover:scale-105 hover:shadow-lg inline-flex items-center"
+                    >
+                        <a href="tel:+353868758890" className="flex items-center">
+                            <Phone className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+                            +353 (86) 8758890
+                        </a>
+                    </Button>
+                </div>
+            </div>
+        </section>
+
+
+
+        {/* Services Section */}
       <section id="services" className="py-20 md:py-28 bg-white">
         <div className="container">
           <div className="text-center mb-12">

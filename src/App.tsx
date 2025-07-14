@@ -11,6 +11,7 @@ import NotFound from "./pages/NotFound";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ChatWidget from "./components/ChatWidget";
+import BottomNavigation from "@/components/ui/BottomNavigation.tsx";
 
 const queryClient = new QueryClient();
 
@@ -30,8 +31,9 @@ const App = () => (
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
+          <BottomNavigation />
           <Footer />
-          <ChatWidget />
+          {/*<ChatWidget />*/}
         </div>
       </BrowserRouter>
     </TooltipProvider>
