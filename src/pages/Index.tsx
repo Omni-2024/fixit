@@ -186,10 +186,7 @@ const Index = () => {
                             asChild
                             className="bg-brand-yellow-100 hover:bg-brand-yellow-100/90 text-brand-primary-100 px-8 py-4 text-lg font-semibold shadow-md transition duration-300 hover:scale-105 hover:shadow-lg inline-flex items-center"
                         >
-                            <a href="tel:+353868758890" className="flex items-center gap-2">
-                                <Phone className="h-5 w-5" />
-                                +353 (86) 8758890
-                            </a>
+                                <Link to="/contact">Request Quote</Link>
                         </Button>
                     </div>
                 </div>
