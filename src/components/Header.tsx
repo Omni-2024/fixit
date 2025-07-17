@@ -77,9 +77,10 @@ const Header = () => {
                         asChild
                         className="md:hidden sm:hidden bg-red-600 text-white font-semibold hover:bg-red-700 transition"
                     >
-                        <NavLink to="/contact" className=" flex items-center justify-center">
-                            Emergency Call
-                        </NavLink>
+                        <a href="tel:+353 (86) 8758890" className="flex items-center gap-2">
+                            <Phone className="h-4 w-4" />
+                            Emergency call
+                        </a>
                     </Button>
                 </div>
 
