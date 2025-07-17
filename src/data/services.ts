@@ -59,7 +59,7 @@ export const services: Service[] = [
             "Pump servicing",
             "Gutter and downpipe repair",
         ],
-        image: "/placeholder.svg?height=400&width=600",
+        image: "/services/Plumber.png?height=400&width=600",
         rates: {
             weekday: { "07-19": 130, "19-24": 155, "00-07": 225 },
             weekend: { "07-19": 155, "19-24": 185, "00-07": 255 },
@@ -83,7 +83,7 @@ export const services: Service[] = [
             "Energy efficiency assessments",
             "Multi-site service contracts",
         ],
-        image: "/placeholder.svg?height=400&width=600",
+        image: "/services/Commercial Boiler.png?height=400&width=600",
         rates: {
             weekday: { "07-19": 165, "19-24": 205, "00-07": 250 },
             weekend: { "07-19": 185, "19-24": 205, "00-07": 275 },
@@ -109,7 +109,7 @@ export const services: Service[] = [
             "Electrical condition reports",
             "Commercial electrical works",
         ],
-        image: "/placeholder.svg?height=400&width=600",
+        image: "/services/Electrician.png?height=400&width=600",
         rates: {
             weekday: { "07-19": 110, "19-24": 145, "00-07": 205 },
             weekend: { "07-19": 145, "19-24": 175, "00-07": 245 },
@@ -134,7 +134,7 @@ export const services: Service[] = [
             "Refrigerant leak detection",
             "System upgrades and modernization",
         ],
-        image: "/placeholder.svg?height=400&width=600",
+        image: "/services/AC image.png?height=400&width=600",
         rates: {
             weekday: null,
             weekend: { "07-19": 155, "19-24": 185, "00-07": 255 },
@@ -159,7 +159,7 @@ export const services: Service[] = [
             "Timber treatment and finishing",
             "Custom furniture creation",
         ],
-        image: "/placeholder.svg?height=400&width=600",
+        image: "/services/Carpentry.png?height=400&width=600",
         rates: {
             weekday: { "07-19": 110, "19-24": 145, "00-07": 205 },
             weekend: { "07-19": 145, "19-24": 175, "00-07": 245 },
@@ -183,7 +183,7 @@ export const services: Service[] = [
             "Site cleanup and preparation",
             "Structural alterations",
         ],
-        image: "/placeholder.svg?height=400&width=600",
+        image: "/services/Plumber.png?height=400&width=600",
         rates: {
             weekday: { "07-19": 110, "19-24": 145, "00-07": 205 },
             weekend: { "07-19": 145, "19-24": 175, "00-07": 245 },
@@ -207,7 +207,7 @@ export const services: Service[] = [
             "Ongoing prevention programs",
             "Commercial pest management",
         ],
-        image: "/placeholder.svg?height=400&width=600",
+        image: "/services/Plumber.png?height=400&width=600",
         rates: {
             weekday: null,
             weekend: { "07-19": 145, "19-24": 175, "00-07": 245 },
@@ -231,7 +231,7 @@ export const services: Service[] = [
             "Emergency drain clearance",
             "Commercial drainage solutions",
         ],
-        image: "/placeholder.svg?height=400&width=600",
+        image: "/services/Drain cleaning image.png?height=400&width=600",
         rates: {
             weekday: { "07-19": 160, "19-24": 195, "00-07": 225 },
             weekend: { "07-19": 185, "19-24": 215, "00-07": 285 },
@@ -255,7 +255,7 @@ export const services: Service[] = [
             "Roof inspections and surveys",
             "Commercial roofing solutions",
         ],
-        image: "/placeholder.svg?height=400&width=600",
+        image: "/services/Plumber.png?height=400&width=600",
         rates: {
             weekday: { "07-19": 110, "19-24": 145, "00-07": 205 },
             weekend: { "07-19": 145, "19-24": 175, "00-07": 245 },
@@ -279,7 +279,7 @@ export const services: Service[] = [
             "Performance diagnostics",
             "Preventive maintenance advice",
         ],
-        image: "/placeholder.svg?height=400&width=600",
+        image: "/services/Boiler Service.png?height=400&width=600",
         rates: {
             weekday: { "07-19": 125, "19-24": 165, "00-07": null },
             weekend: { "07-19": 155, "19-24": 185, "00-07": null },
@@ -304,7 +304,7 @@ export const services: Service[] = [
             "Insurance requirement fulfillment",
             "Annual renewal reminders",
         ],
-        image: "/placeholder.svg?height=400&width=600",
+        image: "/services/Plumber.png?height=400&width=600",
         rates: {
             weekday: { "07-19": 125, "19-24": 165, "00-07": null },
             weekend: { "07-19": 155, "19-24": 185, "00-07": null },
@@ -329,7 +329,7 @@ export const services: Service[] = [
             "Compliance documentation",
             "Cost-effective combined service",
         ],
-        image: "/placeholder.svg?height=400&width=600",
+        image: "/services/Boiler Service.png?height=400&width=600",
         rates: {
             weekday: { "07-19": 230, "19-24": 310, "00-07": null },
             weekend: { "07-19": 290, "19-24": 350, "00-07": null },
