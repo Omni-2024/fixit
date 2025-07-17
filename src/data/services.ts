@@ -34,7 +34,7 @@ export const services: Service[] = [
             "Gas safety inspections",
             "Emergency call-outs available 24/7",
         ],
-        image: "/placeholder.svg?height=400&width=600",
+        image: "/services/heating gas.jpg?height=400&width=600",
         rates: {
             weekday: { "07-19": 130, "19-24": 165, "00-07": 225 },
             weekend: { "07-19": 155, "19-24": 185, "00-07": 255 },
@@ -255,7 +255,7 @@ export const services: Service[] = [
             "Roof inspections and surveys",
             "Commercial roofing solutions",
         ],
-        image: "/services/Plumber.png?height=400&width=600",
+        image: "/services/Roofing.png?height=400&width=600",
         rates: {
             weekday: { "07-19": 110, "19-24": 145, "00-07": 205 },
             weekend: { "07-19": 145, "19-24": 175, "00-07": 245 },
@@ -304,7 +304,7 @@ export const services: Service[] = [
             "Insurance requirement fulfillment",
             "Annual renewal reminders",
         ],
-        image: "/services/Plumber.png?height=400&width=600",
+        image: "/services/Gas safe Img.png?height=400&width=600",
         rates: {
             weekday: { "07-19": 125, "19-24": 165, "00-07": null },
             weekend: { "07-19": 155, "19-24": 185, "00-07": null },
