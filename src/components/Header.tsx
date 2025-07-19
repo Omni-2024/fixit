@@ -71,7 +71,7 @@ const Header = () => {
             <div className=" flex-col  items-center justify-center bg-[#181F32] " >
                 <div className=" container  flex md:justify-center justify-between items-center">
                     <NavLink to="/" className="flex items-center gap-2 font-bold text-xl transition-transform hover:scale-105">
-                        <img className="md:w-[7rem] md:h-[7rem] w-[5rem] h-[5rem] object-contain" src="/logo.png" alt="WEFIX LTD" />
+                        <img className="md:w-[9rem] md:h-[9rem] w-[5rem] h-[5rem] object-contain" src="/logo.png" alt="WEFIX LTD" />
                     </NavLink>
                     <Button
                         asChild

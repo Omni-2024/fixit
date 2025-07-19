@@ -12,23 +12,25 @@ interface ServiceCardSimpleProps {
 
 const ServiceCardSimple = ({ icon, title, description, slug }: ServiceCardSimpleProps) => {
     return (
-        <Card className="group transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:border-brand-yellow-100 relative">
-            <CardHeader className="flex flex-row items-center gap-4">
-                <div className="text-white bg-brand-primary-100 p-3 rounded-lg">{icon}</div>
-                <CardTitle className="text-xl">{title}</CardTitle>
-            </CardHeader>
-            <CardContent>
-                <p className="text-muted-foreground mb-4">{description}</p>
-                <div className="flex items-center justify-between">
-                    <Link
-                        to={`/services/${slug}`}
-                        className="font-semibold text-brand-primary-100 flex items-center gap-2 hover:text-brand-yellow-100 transition-colors"
-                    >
-                        Learn More <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                    </Link>
-                </div>
-            </CardContent>
-        </Card>
+        <Link
+            to={`/services/${slug}`}
+            className="block group transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:border-brand-yellow-100 relative"
+        >
+            <Card className="h-full">
+                <CardHeader className="flex flex-row items-center gap-4">
+                    <div className="text-white bg-brand-primary-100 p-3 rounded-lg">{icon}</div>
+                    <CardTitle className="text-xl">{title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                    <p className="text-muted-foreground mb-4">{description}</p>
+                    <div className="flex items-center justify-between">
+                        <span className="font-semibold text-brand-primary-100 flex items-center gap-2 group-hover:text-brand-yellow-100 transition-colors">
+                            Learn More <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                        </span>
+                    </div>
+                </CardContent>
+            </Card>
+        </Link>
     )
 }
 

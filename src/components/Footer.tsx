@@ -1,6 +1,7 @@
 
 import { Wrench, Phone, Mail, MapPin } from "lucide-react";
 import { NavLink } from "react-router-dom";
+import type React from "react";
 
 const Footer = () => {
   return (
@@ -8,9 +9,8 @@ const Footer = () => {
       <div className="container py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
-            <NavLink to="/" className="flex items-center gap-2 font-bold text-2xl mb-4">
-              <Wrench className="h-7 w-7 text-brand-yellow-100" />
-              <span className="font-heading">WEFIX LTD</span>
+            <NavLink to="/" className="flex items-center md:justify-start justify-center gap-2 font-bold text-2xl mb-4">
+              <img className="md:w-[7rem] md:h-[7rem] w-[7rem] h-[7rem] object-contain mt-[-2rem]" src="/logo.png" alt="WEFIX LTD" />
             </NavLink>
             <p className="text-brand-blue-200">Your trusted partner for fast, reliable repair and maintenance services.</p>
           </div>
@@ -27,7 +27,7 @@ const Footer = () => {
             <ul className="space-y-3 text-brand-blue-200">
               <li className="flex items-start gap-3"><MapPin className="h-5 w-5 mt-1 text-brand-yellow-100" /><span>Lissane East, Clarecastle, Co. Clare</span></li>
               <li className="flex items-center gap-3"><Phone className="h-5 w-5 text-brand-yellow-100" /><a href="tel:+353 (86) 8758890" className="hover:text-brand-yellow-100 transition-colors">+353 (86) 8758890</a></li>
-              <li className="flex items-center gap-3"><Mail className="h-5 w-5 text-brand-yellow-100" /><a href="mailto:contact@wefixltd.com" className="hover:text-brand-yellow-100 transition-colors">contact@wefixltd.com</a></li>
+              <li className="flex items-center gap-3"><Mail className="h-5 w-5 text-brand-yellow-100" /><a href="mailto:info@wefixltd.com" className="hover:text-brand-yellow-100 transition-colors">info@wefixltd.com</a></li>
             </ul>
           </div>
           <div>

@@ -14,6 +14,7 @@ import ChatWidget from "./components/ChatWidget";
 import BottomNavigation from "@/components/BottomNavigation.tsx";
 import ServiceDetailsPage from "@/pages/ServiceDetailsPage.tsx";
 import ServicesPage from "@/pages/ServicesPage.tsx";
+import ScrollToTop from "@/components/ScrollToTop.tsx";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +24,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop/>
         <div className="flex flex-col min-h-screen">
           <Header />
           <main className="flex-grow">

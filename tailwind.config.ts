@@ -26,7 +26,7 @@ export default {
 			colors: {
         'brand-primary': {
           '50': '#eff8ff',
-          '100': '#002244',
+          '100': '#181F32',
         },
 		'brand-secondary': {
           '50': '#FFFFFF',
