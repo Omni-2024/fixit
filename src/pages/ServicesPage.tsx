@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight, Clock, Shield, Phone } from "lucide-react"
 import { Link } from "react-router-dom"
 import { services } from "../data/services"
+import type React from "react";
 
 const ServicesPage = () => {
     return (
@@ -41,8 +42,8 @@ const ServicesPage = () => {
                         <Card key={service.slug} className="group hover:shadow-lg transition-all duration-300">
                             <CardHeader>
                                 <div className="flex items-start gap-4">
-                                    <div className="bg-brand-primary-100 text-white p-3 rounded-lg">
-                                        <service.icon size={24} />
+                                    <div className="bg-[#f0eeeb] p-3 rounded-lg">
+                                        <img src={service.icon} alt={service.title} className="h-8 w-8 object-contain" />
                                     </div>
                                     <div className="flex-1">
                                         <CardTitle className="text-xl mb-2">{service.title}</CardTitle>

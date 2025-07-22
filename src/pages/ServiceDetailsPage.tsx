@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge"
 import { ArrowLeft, Phone, Clock, Shield, CheckCircle, Star } from "lucide-react"
 import { Link, useParams } from "react-router-dom"
 import { services } from "../data/services"
-import { useState } from "react"
+import React, { useState } from "react"
 
 const ServiceDetailPage = () => {
     const { slug } = useParams<{ slug: string }>()
@@ -55,8 +55,10 @@ const ServiceDetailPage = () => {
                         {/* Header */}
                         <div>
                             <div className="flex items-center gap-4 mb-4">
-                                <div className="bg-brand-primary-100 text-white p-4 rounded-lg">
-                                    <service.icon size={32} />
+                                <div className="bg-[#f0eeeb] text-white p-4 rounded-lg">
+                                    {/*<div className="bg-[#f0eeeb] p-3 rounded-lg">*/}
+                                        <img src={service.icon} alt={service.title} className="h-8 w-8 object-contain" />
+                                    {/*</div>*/}
                                 </div>
                                 <div>
                                     <h1 className="text-3xl md:text-4xl font-bold">{service.title}</h1>

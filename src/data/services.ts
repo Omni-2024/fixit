@@ -1,9 +1,8 @@
-import { Zap, Droplets, Wrench, Heater, Wind, Bug } from 'lucide-react'
 
 export interface Service {
     title: string
     slug: string
-    icon: any
+    icon: string
     description: string
     longDescription: string
     features: string[]
@@ -20,7 +19,7 @@ export const services: Service[] = [
     {
         title: "Heating & Gas",
         slug: "heating-gas",
-        icon: Heater,
+        icon: "/services/icons/Heating & Gas.png",
         description: "Reliable heating and furnace repairs.",
         longDescription:
             "Our certified gas engineers provide comprehensive heating solutions for residential and commercial properties. From emergency boiler repairs to complete system installations, we ensure your property stays warm and safe year-round.",
@@ -45,7 +44,7 @@ export const services: Service[] = [
     {
         title: "Plumbing",
         slug: "plumbing",
-        icon: Droplets,
+        icon: "/services/icons/Plumbing.png",
         description: "From leaky faucets to burst pipes.",
         longDescription:
             "Professional plumbing services covering everything from minor repairs to major installations. Our experienced plumbers use the latest tools and techniques to solve your plumbing problems efficiently.",
@@ -69,7 +68,7 @@ export const services: Service[] = [
     {
         title: "Commercial Heating & Gas",
         slug: "commercial-heating-gas",
-        icon: Heater,
+        icon: "/services/icons/C Heating.png",
         description: "Commercial heating services for businesses.",
         longDescription:
             "Specialized commercial heating and gas services designed for businesses, offices, and industrial facilities. We understand the importance of maintaining comfortable working environments and comply with all commercial regulations.",
@@ -94,7 +93,7 @@ export const services: Service[] = [
     {
         title: "Electrics",
         slug: "electrics",
-        icon: Zap,
+        icon: "/services/icons/Electrics.png",
         description: "Safe and certified electrical solutions.",
         longDescription:
             "Comprehensive electrical services from qualified electricians. Whether you need a simple socket installation or a complete rewire, we ensure all work meets current safety standards and regulations.",
@@ -120,7 +119,7 @@ export const services: Service[] = [
     {
         title: "Air Conditioning",
         slug: "air-conditioning",
-        icon: Wind,
+        icon: "/services/icons/AC.png",
         description: "AC repair, installation, and maintenance.",
         longDescription:
             "Professional air conditioning services for residential and commercial properties. From installation to maintenance, we keep your spaces comfortable year-round with energy-efficient cooling solutions.",
@@ -145,7 +144,7 @@ export const services: Service[] = [
     {
         title: "Carpentry",
         slug: "carpentry",
-        icon: Wrench,
+        icon: "/services/icons/Carpentry.png",
         description: "Expert carpentry services.",
         longDescription:
             "Skilled carpentry services for all your woodwork needs. From structural repairs to bespoke joinery, our craftsmen deliver quality workmanship using traditional techniques and modern tools.",
@@ -169,7 +168,7 @@ export const services: Service[] = [
     {
         title: "Building Works",
         slug: "building-works",
-        icon: Wrench,
+        icon: "/services/icons/Bulding Works.png",
         description: "General building and renovation work.",
         longDescription:
             "Comprehensive building services from minor repairs to major renovations. Our skilled builders handle everything from brickwork to complete property transformations with attention to detail and quality craftsmanship.",
@@ -217,7 +216,7 @@ export const services: Service[] = [
     {
         title: "Jetting (Drains)",
         slug: "drain-jetting",
-        icon: Droplets,
+        icon: "/services/icons/Jetting.png",
         description: "Professional drain jetting services.",
         longDescription:
             "High-pressure drain jetting services to clear blockages and maintain your drainage system. Our advanced equipment can handle everything from minor blockages to major drain problems.",
@@ -241,7 +240,7 @@ export const services: Service[] = [
     {
         title: "Roofing",
         slug: "roofing",
-        icon: Wind,
+        icon: "/services/icons/Roof.png",
         description: "Expert roofing repairs and installations.",
         longDescription:
             "Complete roofing services from emergency repairs to full installations. Our experienced roofers work with all types of roofing materials and provide reliable solutions to protect your property.",
@@ -265,7 +264,7 @@ export const services: Service[] = [
     {
         title: "Boiler Service",
         slug: "boiler-service",
-        icon: Heater,
+        icon: "/services/icons/Boiler.png",
         description: "Professional boiler servicing.",
         longDescription:
             "Annual boiler servicing to ensure your heating system runs safely and efficiently. Our Gas Safe registered engineers provide comprehensive maintenance to extend your boiler's lifespan and maintain warranty coverage.",
@@ -290,7 +289,7 @@ export const services: Service[] = [
     {
         title: "Gas Safety Certificate",
         slug: "gas-safety-certificate",
-        icon: Zap,
+        icon: "/services/icons/Gas Certificate.png",
         description: "Certified gas safety inspections.",
         longDescription:
             "Official Gas Safety Certificate inspections for landlords and homeowners. Our Gas Safe registered engineers provide thorough safety checks and issue certificates for legal compliance and insurance requirements.",
@@ -315,7 +314,7 @@ export const services: Service[] = [
     {
         title: "Boiler Service & Gas Certificate",
         slug: "boiler-service-gas-certificate",
-        icon: Heater,
+        icon: "/services/icons/Boiler and gas.png",
         description: "Full boiler servicing and certification.",
         longDescription:
             "Combined boiler service and Gas Safety Certificate in one convenient appointment. Save time and money with our comprehensive package that covers both annual maintenance and safety certification requirements.",

@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react"
 import { Link } from "react-router-dom"
 
 interface ServiceCardSimpleProps {
-    icon: React.ReactNode
+    icon: string
     title: string
     description: string
     slug: string
@@ -18,7 +18,9 @@ const ServiceCardSimple = ({ icon, title, description, slug }: ServiceCardSimple
         >
             <Card className="h-full">
                 <CardHeader className="flex flex-row items-center gap-4">
-                    <div className="text-white bg-brand-primary-100 p-3 rounded-lg">{icon}</div>
+                    <div className="bg-[#f0eeeb] p-3 rounded-lg">
+                        <img src={icon} alt={title} className="h-8 w-8 object-contain" />
+                    </div>
                     <CardTitle className="text-xl">{title}</CardTitle>
                 </CardHeader>
                 <CardContent>

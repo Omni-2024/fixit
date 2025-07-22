@@ -206,7 +206,7 @@ const Index = () => {
                         {featuredServices.map((service) => (
                             <ServiceCardSimple
                                 key={service.slug}
-                                icon={<service.icon size={28} />}
+                                icon={service.icon}
                                 title={service.title}
                                 description={service.description}
                                 slug={service.slug}
@@ -272,7 +272,7 @@ const Index = () => {
                     </div>
                     <div className="relative h-80">
                         <img
-                            src="/placeholder.svg?height=400&width=600"
+                            src="/map.jpeg?height=400&width=600"
                             alt="Technician working"
                             className="rounded-lg shadow-xl object-cover w-full h-full"
                         />
